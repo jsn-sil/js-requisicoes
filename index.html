@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Requisições HTTP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="h-screen flex justify-center items-center bg-indigo-500">
+
+    <form class="w-3/12 bg-white rounded-md p-4 *:block *:w-full">
+
+        <label for="cep" onclick="alert('cliquei')">Cep</label>
+        <input class="h-[40px] border border-gray-400 rounded-md pl-3 mb-4" id="cep" "cep" type="text"
+            onkeyup="buscaCep()">
+
+        <label for="logradouro">Av/Rua</label>
+        <input class="h-[40px] border border-gray-400 rounded-md pl-3 mb-4" id="logradouro" type="text"
+            placeholder="Av/Rua">
+
+        <label for="bairro">Bairro</label>
+        <input class="h-[40px] border border-gray-400 rounded-md pl-3 mb-4" id="bairro" type="text"
+            placeholder="Digite seu bairro">
+
+
+        <label for="localidade">Cidade</label>
+        <input class="h-[40px] border border-gray-400 rounded-md pl-3 mb-4" id="localidade" type="text"
+            placeholder="Digite sua cidade">
+
+        <label for="Estado">Estado</label>
+        <input class="h-[40px] border border-gray-400 rounded-md pl-3 mb-4" id="estado" type="text"
+            placeholder="Digite seu estado">
+
+    </form>
+
+
+
+
+    <script src="https://unpkg.com/imask"></script>
+
+
+    <script>
+        const element = document.getElementById('cep');
+        const maskOptions = {
+            mask: '00000-000'
+        };
+        const mask = IMask(element, maskOptions);
+    </script>
+    <script src="index.js"></script>
+</body>
+
+</html>
